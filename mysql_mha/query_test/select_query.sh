@@ -28,4 +28,4 @@ while true; do
   sleep 1
 done  
 
-#mysql -hlocalhost -utestuser -p'testpassword1!' --database=users_db -e "SELECT * FROM users ORDER BY id DESC LIMIT 5;"
+# mysql -hlocalhost -utestuser -p'testpassword1!' --database=users_db -e "SELECT * FROM users ORDER BY id DESC LIMIT 5;"
