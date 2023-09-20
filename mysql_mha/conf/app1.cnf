@@ -1,0 +1,25 @@
+### mha.cnf
+[server default]
+manager_workdir=/home/mhauser/mha
+manager_log=/home/mhauser/mha/logs/manager.log
+
+master_binlog_dir=/usr/local/mysql/data
+master_pid_file=/usr/local/mysql/data/mysqld.pid
+
+[server1]
+hostname=192.168.56.211
+ip=192.168.56.211
+port=3306
+candidate_master=1
+
+[server2]
+hostname=192.168.56.212
+ip=192.168.56.212
+port=3306
+candidate_master=1
+
+[server3]
+hostname=192.168.56.213
+ip=192.168.56.213
+port=3306
+no_master=1
