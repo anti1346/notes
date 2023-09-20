@@ -1,0 +1,27 @@
+#masterha_default.cnf
+[server default]
+user=mhauser
+password=mhapassword
+
+repl_user=repluser
+repl_password=mhapassword
+
+ssh_user=mhauser
+ssh_port=22
+ssh_ip=192.168.56.213
+
+master_binlog_dir=/usr/local/mysql/data
+
+remote_workdir=/home/mhauser/mha
+
+secondary_check_script=masterha_secondary_check -s 192.168.56.211 -s 192.168.56.212 -s 192.168.56.213
+
+ping_interval=3
+
+### Script
+master_ip_failover_script=/home/mhauser/mha/scripts/master_ip_failover
+
+master_ip_online_change_script=/home/mhauser/mha/scripts/master_ip_online_change
+
+# shutdown_script= /script/masterha/power_manager
+# report_script= /script/masterha/send_report
